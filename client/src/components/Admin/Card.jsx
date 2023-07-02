@@ -29,20 +29,7 @@ const AdminCards = ({ item }) => {
             const tx_from = tx.from;
 
 
-            // await axios.post("http://localhost:8000/insurance", {
-            //   amount: parseInt(ether),
-            //   receiver: to_addr,
-            // sender: tx_from,
-            // },
-            //   {
-            //   headers: {
-            //     'Content-Type': 'application/json'
-            //   }
-            // }).then(res => {
-            //   console.log(res.data);
-            // }).catch(err => {
-            //   console.log(err);
-            // })
+            
 
 
 
@@ -60,7 +47,7 @@ const AdminCards = ({ item }) => {
             ether: amt.toString(),
             to_addr: item.sender
         });
-        await axios.patch(`http://localhost:8080/insurance/${item._id}`, {
+        await axios.patch(`https://claimpe.onrender.com/insurance/${item._id}`, {
             status: "accepted"
         }).then(res => {
             console.log(res.data);
@@ -69,20 +56,23 @@ const AdminCards = ({ item }) => {
         });
     }
     const reject = async () => {
-        await axios.patch(`http://localhost:8080/insurance/${item._id}`, {
-            status: "rejected"
-        }).then(res => {
+        await axios
+          .patch(`https://claimpe.onrender.com/insurance/${item._id}`, {
+            status: "rejected",
+          })
+          .then((res) => {
             console.log(res.data);
-        }).catch(err => {
+          })
+          .catch((err) => {
             console.log(err);
-        });
+          });
     }
     return (
         <div className=" px-4 mb-2">
             <Card className=" card ">
 
             <CardBody className=" ">
-                    <h1 className="text-2xl font-bold mb-2">{item.amount} SNX</h1>
+                    <h1 className="text-2xl font-bold mb-2">{item.amount} Matic</h1>
                     <p>To: {item.receiver}</p>
                     <p>From: {item.sender}</p>
                 </CardBody>

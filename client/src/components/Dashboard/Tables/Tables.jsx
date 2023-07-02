@@ -24,7 +24,7 @@ const Tables = ({ item }) => {
         )}
         {/* {!item.status === 'Ongoing' ? <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"> Accepted </span>: <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-400 text-black"> Ongoing </span> } */}
       </td>
-      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.amount} SNX</td>
+      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.amount} Matic</td>
       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
 
       <Button

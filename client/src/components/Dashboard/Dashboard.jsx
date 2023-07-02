@@ -9,25 +9,26 @@ const Dashboard = () => {
   const [data, setData] = useState([])
   console.log(data)
   useEffect(() => {
-    axios.get('http://localhost:8080/insurance', {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(res => {
-      console.log(typeof res.data)
-      setData(res.data)
-    }
-    ).catch(err => {
-      console.log(err)
-    }
-    )
+    axios
+      .get("https://claimpe.onrender.com/insurance", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        console.log(typeof res.data);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
     <div>
       <div class="flex flex-col text-center">
         <h1 className='text-base mt-10 mb-2'>STAKED AMOUNT</h1>
-        <h1 className='text-5xl mb-10'>4 SNX</h1>
+        <h1 className='text-5xl mb-10'>4 Matic</h1>
       </div>
       <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto mx-10">
@@ -40,7 +41,7 @@ const Dashboard = () => {
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Date of Applying</th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Status</th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Amount</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Mine sUSD</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Mine xMatic</th>
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
