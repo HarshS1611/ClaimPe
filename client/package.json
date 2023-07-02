@@ -42,8 +42,8 @@
     "web3modal": "^1.9.12"
   },
   "scripts": {
-    "start": "craco  start",
-    "build": "craco build",
+    "start": "craco --openssl-legacy-provider start",
+    "build": "craco --openssl-legacy-provider build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
