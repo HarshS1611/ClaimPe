@@ -25,9 +25,9 @@ let minter = async () => {
     // });
     // console.log('Submitted', response.hash);
     // await response.wait();
-    alert("Minting 3 sUSD");
+    alert("Minting 3 xMATIC");
     console.log(
-      "Mined 3 sUSD",
+      "Mined 3 xMATIC",
       `https://mumbai.polygonscan.com/tx/0x41ed403bd407ff118119e457f49c1ed9d295cbccd77b5c049b7fe9adac5e3a9e`
     );
 }
