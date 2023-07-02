@@ -15,23 +15,33 @@
     "@mui/styles": "^5.1.1",
     "@mui/x-data-grid": "^5.0.1",
     "@mui/x-data-grid-generator": "^5.0.1",
+    "@synthetixio/contracts-interface": "^2.67.0-alpha",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "autoprefixer": "^9.8.6",
+    "axios": "^0.24.0",
     "ethers": "^5.5.4",
+    "nft.storage": "^6.0.0",
+    "notistack": "^2.0.3",
     "postcss": "^7.0.35",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-loading-overlay": "^1.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "synthetix": "^2.67.0-alpha",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "web-vitals": "^0.2.4",
+    "@oceanprotocol/contracts": "^0.5.6",
+    "@oceanprotocol/lib": "^0.6.5",
     "web3": "^1.6.1"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "craco --openssl-legacy-provider start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
@@ -56,7 +66,7 @@
   },
   "devDependencies": {
     "@openzeppelin/contracts": "^4.5.0",
-    "autoprefixer": "^9.8.8",
+    "autoprefixer": "^9.8.8",    
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }

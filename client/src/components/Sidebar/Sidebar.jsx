@@ -17,7 +17,7 @@ function Sidebar() {
                         rel="noreferrer"
                         className="mt-2 text-center w-full inline-block"
                     >
-                        <H6 color="white">SecurePe</H6>
+                        <H6 color="white">claimPe</H6>
                     </a>
                     <div className="flex flex-col">
                         <hr className="my-4 min-w-full" />
@@ -49,6 +49,15 @@ function Sidebar() {
                                     activeClassName="bg-gradient-to-tr from-purple-500 to-purple-700  text-white shadow-md"
                                 >
                                     Health
+                                </NavLink>
+                            </li>
+                            <li className="rounded-lg mb-2">
+                                <NavLink
+                                    to="/cardview"
+                                    className="flex items-center gap-4 text-sm text-white font-light px-4 py-3 rounded-lg"
+                                    activeClassName="bg-gradient-to-tr from-purple-500 to-purple-700  text-white shadow-md"
+                                >
+                                    View Claims
                                 </NavLink>
                             </li>
                         </ul>
