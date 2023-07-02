@@ -52,7 +52,7 @@ const Admin = () => {
   }
   useEffect(() => {
     loadBlockChain();
-    axios.get('http://localhost:8000/insurance', {
+    axios.get('http://localhost:8080/insurance', {
       headers: {
         'Content-Type': 'application/json'
       }
@@ -65,9 +65,10 @@ const Admin = () => {
   }, []);
   return (
     <div>
-      <p>Your account: {account}</p>
+      <div className="text-center my-5">
+          <p>Your account: {account}</p>
       <p> Sender Bal: {sender_balance}</p>
-
+      </div>
       {admindata.map((item) => (
         <AdminCards item={item} />
       ))}

@@ -1,10 +1,27 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-
+import Tables from './Tables/Tables'
+import minter from "../Payment/minter"
 const Dashboard = () => {
   const [name, setName] = useState('John')
   const [title, setTitle] = useState('CEO')
   const [status, setStatus] = useState('Active')
-  
+  const [data, setData] = useState([])
+  console.log(data)
+  useEffect(() => {
+    axios.get('http://localhost:8080/insurance', {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => {
+      console.log(typeof res.data)
+      setData(res.data)
+    }
+    ).catch(err => {
+      console.log(err)
+    }
+    )
+  }, []);
 
   return (
     <div>
@@ -28,26 +45,16 @@ const Dashboard = () => {
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
 
-                  <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">Life Insurance</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">12/12/2020</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                        Active
-                      </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      1000 SNX
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      1000 sUSD
-                    </td>
-                  </tr>
+                  {/* {data.map(item => {
+                    
+                    return (
+                      <Tables  />
+                    )
+                  })} */}
 
+                  {data.map((item) => (
+                    <Tables item={item} />
+                  ))}
                   
                 </tbody>
               </table>

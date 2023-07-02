@@ -60,7 +60,7 @@ const AdminCards = ({ item }) => {
             ether: amt.toString(),
             to_addr: item.sender
         });
-        await axios.patch(`http://localhost:8000/insurance/${item._id}`, {
+        await axios.patch(`http://localhost:8080/insurance/${item._id}`, {
             status: "accepted"
         }).then(res => {
             console.log(res.data);
@@ -69,7 +69,7 @@ const AdminCards = ({ item }) => {
         });
     }
     const reject = async () => {
-        await axios.patch(`http://localhost:8000/insurance/${item._id}`, {
+        await axios.patch(`http://localhost:8080/insurance/${item._id}`, {
             status: "rejected"
         }).then(res => {
             console.log(res.data);
@@ -81,8 +81,8 @@ const AdminCards = ({ item }) => {
         <div className=" px-4 mb-2">
             <Card className=" card ">
 
-                <CardBody className=" ">
-                    <h1 className="text-2xl font-bold">{item.amount} ETH</h1>
+            <CardBody className=" ">
+                    <h1 className="text-2xl font-bold mb-2">{item.amount} SNX</h1>
                     <p>To: {item.receiver}</p>
                     <p>From: {item.sender}</p>
                 </CardBody>
