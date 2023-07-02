@@ -4,6 +4,8 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./components/Dashboard/Dashboard";
 import HealthForm from "./components/Form/Health/HealthForm";
 import FormTabs from "./components/FormTabs/FormTabs";
+import Admin from "./components/Admin/Admin";
+
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/healthform" component={HealthForm} />
         <Route exact path="/motorform" component={FormTabs} />
+        <Route exact path="/admin" component={Admin} />
       </div>
     </div>
   );
