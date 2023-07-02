@@ -126,7 +126,33 @@ export default function HealthForm() {
             data[key] = parseInt(data[key]);
         }
         console.log(data);
-       
+        let payableAmount;
+        axios.post("http://127.0.0.1:8000/predict", data)
+            .then(res => {
+                console.log(res.data.prediction);
+                if (res.data.prediction === 1) {
+                    payableAmount = 0.5 * IPAnnualReimbursementAmt;
+                    console.log(payableAmount);
+
+                    localStorage.setItem("payableAmount", payableAmount);
+
+                }
+                else if (res.data.prediction === 0) {
+                    payableAmount = 0.2 * IPAnnualReimbursementAmt;
+                    console.log(payableAmount);
+                    console.log(payableAmount);
+
+                    localStorage.setItem("payableAmount", payableAmount);
+                }
+                window.location.href = "/payment";
+            })
+
+            .catch(err => {
+                console.log(
+                    "Error: ",
+                    err
+                );
+            });
 
 
 
