@@ -32,4 +32,4 @@ let minter = async () => {
     );
 }
 
-module.exports = minter;
+export default minter;
