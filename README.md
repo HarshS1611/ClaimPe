@@ -1,4 +1,4 @@
-# ClaimPe
+# ClaimPe - Full Stack Web Application Track
 
 ML repo - https://github.com/sahas-01/ClaimPe-ML
 
