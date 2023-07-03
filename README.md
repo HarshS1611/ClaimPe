@@ -1,5 +1,7 @@
 # ClaimPe
 
+ML repo - https://github.com/sahas-01/ClaimPe-ML
+
 # Problem
 The insurance industry faces a significant challenge of dealing with numerous insurance claims on a daily basis. Without proper verification mechanisms, fraudulent claims are becoming increasingly prevalent, leading to financial losses for insurance companies and higher premiums for policyholders. To address this problem, we have developed ClaimPe, a web application designed to detect and prevent fake insurance claims.
 
